@@ -1,0 +1,7 @@
+{
+  "name": "sqproject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
