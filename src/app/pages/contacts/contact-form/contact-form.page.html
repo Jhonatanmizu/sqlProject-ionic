@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="contacts"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{
+      title
+      }}
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nome <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required autocapitalize="on" formControlName="name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button block color="primary" type="submit" [disabled]="contactForm.invalid">
+      Salvar
+    </ion-button>
+  </form>
+</ion-content>
